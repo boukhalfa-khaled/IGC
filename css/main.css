@@ -1,0 +1,233 @@
+:root {
+  --color-white: white;
+  --color-background: #f2ecff;
+  --color-black: black;
+  --color-blue: #0484c9;
+  --color-green: green;
+  --color-gray: #4a4a4a;
+
+  --gradient-green-start: #0f9381;
+  --gradient-green-end: #045349;
+
+  --transition: all 300ms ease;
+
+  --container-width-lg: 74%;
+  --container-width-md: 88%;
+
+  --btn-raduis: 8px;
+}
+
+/* ==== GENERAL  ==== */
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  border: 0;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+body {
+  line-height: 1.6;
+  background: var(--color-background);
+  overflow-x: hidden;
+}
+
+.container {
+  width: var(--container-width-lg);
+  max-width: 1800px;
+  margin-inline: auto;
+}
+a {
+  color: var(--color-black);
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+.btn {
+  display: inline-block;
+  width: fit-content;
+  border-radius: var(--btn-raduis);
+  transition: var(--transition);
+  border: 1px solid;
+  text-align: center;
+  cursor: pointer;
+}
+
+section {
+  height: 100vh;
+}
+
+/* ------ Header --------- */
+header {
+  width: 100vw;
+  height: 4.5rem;
+  position: fixed;
+  top: 0;
+  z-index: 10000;
+  background: var(--color-background);
+}
+header .container {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  /* margin-right: 10rem; */
+  width: 50px;
+}
+
+#nav__items {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  width: fit-content;
+  transform: translateX(-50%);
+}
+#nav__items li a {
+  transition: var(--transition);
+  color: var(--color-gray);
+  position: relative;
+}
+
+#nav__items li a:after {
+  content: "";
+  width: 0%;
+  height: 3px;
+  left: 0;
+  bottom: -5px;
+  position: absolute;
+  background-color: var(--color-blue);
+  transition: var(--transition);
+}
+
+#nav__items li:hover a {
+  color: var(--color-blue);
+}
+#nav__items li:hover a:after {
+  width: 100%;
+}
+
+header .container .buttons {
+}
+
+header .container .buttons .btn {
+  padding: 1em 2em;
+  text-transform: uppercase;
+}
+
+header .container .buttons .sign-up {
+  background-color: var(--color-blue);
+  border-color: var(--color-blue);
+  color: var(--color-white);
+  font-weight: bold;
+}
+
+header .container .buttons .sign-in {
+  border: none;
+  background-color: var(--color-background);
+  font-weight: bold;
+}
+header .container .buttons .sign-in:hover {
+  color: var(--color-blue);
+}
+
+/* --- LANDING PAGE ---- */
+.landingPage {
+  /* margin-top: 14rem; */
+  padding-top: 12rem;
+}
+.landingPage .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.landingPage__content {
+  width: 31%;
+  height: 100%;
+}
+.landingPage__content h1 {
+  font-size: 4.3rem;
+  color: var(--color-blue);
+}
+.landingPage__content p {
+  font-size: 1rem;
+  color: var(--color-gray);
+  margin-bottom: 2rem;
+}
+.landingPage__content .btn {
+  background: linear-gradient(
+    to right,
+    var(--gradient-green-start),
+    var(--gradient-green-end)
+  );
+  color: var(--color-white);
+  padding: 1em 4em;
+  text-transform: capitalize;
+}
+.landingPage__images {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 58%;
+  height: 600px;
+  overflow: hidden;
+}
+.landingPage__images img {
+  width: calc(100% - 8rem);
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: var(--transition);
+}
+.landingPage__images img[data-number="1"] {
+  z-index: 1;
+}
+.landingPage__images img[data-number="2"] {
+  z-index: 2;
+  top: 4rem;
+  left: 4rem;
+}
+.landingPage__images img[data-number="3"] {
+  z-index: 3;
+  top: 8em;
+  left: 8rem;
+}
+
+* {
+  /* border: 1px solid red; */
+}
+
+/* ===== MEDIEM SCREEN */
+@media screen and (max-width: 1024px) {
+  /* GENERAL */
+  .container {
+    width: var(--container-width-md);
+  }
+  body {
+    background-color: wheat;
+  }
+}
+/* 
+|     
+|     
+|     
+|     
+|     
+*/
+
+/* SMALL SCREEN */
+@media screen and (max-width: 600px) {
+  .container {
+    width: 100%;
+    padding: 1rem;
+  }
+  body {
+    background-color: #282828;
+  }
+}

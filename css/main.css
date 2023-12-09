@@ -26,7 +26,7 @@
   list-style: none;
   text-decoration: none;
   box-sizing: border-box;
-  font-family: sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 body {
   line-height: 1.6;
@@ -69,6 +69,7 @@ header {
   top: 0;
   z-index: 10000;
   background: var(--color-background);
+  box-shadow: -1px 1px 15px -2px var(--color-gray);
 }
 header .container {
   height: 100%;
@@ -87,7 +88,7 @@ header .container {
   align-items: center;
   gap: 3rem;
   width: fit-content;
-  transform: translateX(-50%);
+  /* transform: translateX(-50%); */
 }
 #nav__items li a {
   transition: var(--transition);
@@ -136,7 +137,9 @@ header .container .buttons .sign-in {
 header .container .buttons .sign-in:hover {
   color: var(--color-blue);
 }
-
+#open__items-btn {
+  display: none;
+}
 /* --- LANDING PAGE ---- */
 .landingPage {
   /* margin-top: 14rem; */
@@ -146,6 +149,7 @@ header .container .buttons .sign-in:hover {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 2rem;
 }
 .landingPage__content {
   width: 31%;
@@ -210,7 +214,39 @@ header .container .buttons .sign-in:hover {
     width: var(--container-width-md);
   }
   body {
-    background-color: wheat;
+    /* background-color: wheat; */
+  }
+  .landingPage {
+    padding-top: 9rem;
+  }
+
+  .landingPage .container {
+    flex-direction: column;
+  }
+  .landingPage__content {
+    width: 100%;
+    text-align: center;
+    height: 100%;
+  }
+  .landingPage__images {
+    /* overflow: visible; */
+    width: 80%;
+    /* height: 350px; */
+  }
+  .landingPage__images img[data-number="1"] {
+    top: 0;
+    left: 100%;
+    width: 100%;
+  }
+  .landingPage__images img[data-number="3"] {
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
+  .landingPage__images img[data-number="2"] {
+    top: 0;
+    left: -100%;
+    width: 100%;
   }
 }
 /* 
@@ -228,6 +264,34 @@ header .container .buttons .sign-in:hover {
     padding: 1rem;
   }
   body {
-    background-color: #282828;
+    /* background-color: #282828; */
+  }
+  header .container {
+    position: relative;
+  }
+  #open__items-btn {
+    display: block;
+    transform: rotate(90deg);
+    font-weight: bold;
+    cursor: pointer;
+  }
+  #open__items-btn.active span {
+    color: var(--color-blue);
+  }
+  #nav__items {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: var(--color-background);
+    gap: 1rem;
+    flex-direction: column;
+    width: 200px;
+    height: 150px;
+    justify-content: center;
+    box-shadow: -1px 7px 7px var(--color-gray);
+  }
+  #nav__items.active {
+    display: flex;
   }
 }

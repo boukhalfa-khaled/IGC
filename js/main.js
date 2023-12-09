@@ -1,3 +1,21 @@
+const openItemsBtn = document.getElementById("open__items-btn");
+
+const navItems = document.getElementById("nav__items");
+
+document.onclick = function (e) {
+  if (e.target.id !== "nav__items" && e.target.id !== "open__items-btn") {
+    openItemsBtn.classList.remove("active");
+    navItems.classList.remove("active");
+  }
+};
+
+console.log(openItemsBtn);
+console.log(navItems);
+openItemsBtn.onclick = function () {
+  openItemsBtn.classList.toggle("active");
+  navItems.classList.toggle("active");
+};
+
 const imageArray = Array.from(document.querySelectorAll("img[data-number]"));
 
 // console.log(imageArray);
@@ -12,4 +30,4 @@ function updateDataNumber() {
 }
 
 // Set up an interval to change images every 1 second
-// setInterval(updateDataNumber, 1000);
+setInterval(updateDataNumber, 3000);

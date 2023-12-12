@@ -437,6 +437,9 @@ header .container .buttons .sign-in:hover {
     left: -100%;
     width: 100%;
   }
+  .certificate form {
+    width: 80%;
+  }
 }
 /* 
 |     
@@ -482,5 +485,11 @@ header .container .buttons .sign-in:hover {
   }
   #nav__items.active {
     display: flex;
+  }
+  .certificate form {
+    width: 95%;
+  }
+  .certificate .container {
+    border: none;
   }
 }

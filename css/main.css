@@ -74,7 +74,7 @@ input {
 }
 
 section {
-  height: 100vh;
+  /* height: 100vh; */
 }
 
 /* ------ Header --------- */
@@ -158,24 +158,24 @@ header .container .buttons .sign-in:hover {
 /* --- LANDING PAGE ---- */
 .landingPage {
   /* margin-top: 14rem; */
-  padding-top: 12rem;
+  padding-top: 8rem;
   min-height: calc(100vh - 4.5rem);
 }
 .landingPage .container {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 35% 1fr;
+  grid-template-rows: 15.3rem 7rem 3.25rem 20rem;
+  column-gap: 3rem;
+  justify-content: center;
   align-items: center;
-  gap: 2rem;
-}
-.landingPage__content {
-  width: 31%;
   height: 100%;
 }
-.landingPage__content h1 {
+.landingPage h1 {
   font-size: 4.3rem;
   color: var(--color-blue);
+  margin-bottom: 1.5rem;
 }
-.landingPage__content p {
+.landingPage p {
   font-size: 1rem;
   color: var(--color-gray);
   margin-bottom: 2rem;
@@ -189,21 +189,29 @@ header .container .buttons .sign-in:hover {
   box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.25),
     -1px 5px 5px 0px rgba(0, 0, 0, 0.21), -2px 11px 7px 0px rgba(0, 0, 0, 0.13),
     -3px 19px 8px 0px rgba(0, 0, 0, 0.04), -5px 30px 8px 0px rgba(0, 0, 0, 0);
+  height: 3.25rem;
 }
-.landingPage__content .btn a {
+.landingPage .btn a {
   color: var(--color-white);
   font-weight: bold;
 }
+.landingPage .btn {
+}
 .landingPage__images {
+  grid-column: 2;
+  grid-row: 1 / 5;
   position: relative;
   top: 0;
   left: 0;
-  width: 58%;
-  height: 600px;
+  width: 100%;
+  height: 100%;
   overflow: hidden;
 }
 .landingPage__images img {
   width: calc(100% - 8rem);
+  object-fit: contain;
+  /* width: fit-content; */
+  /* height: calc(100% - 8rem); */
   position: absolute;
   top: 0;
   left: 0;
@@ -585,26 +593,36 @@ footer .contactUs:hover::after {
   .container {
     width: var(--container-width-md);
   }
-  body {
-    /* background-color: wheat; */
-  }
   .landingPage {
-    padding-top: 9rem;
+    padding-top: 1rem;
   }
 
   .landingPage .container {
-    flex-direction: column;
-  }
-  .landingPage__content {
-    width: 100%;
+    grid-template-columns: 1fr;
+    grid-template-rows: 15.3rem 25rem 3.25rem 7rem;
+    column-gap: 0;
     text-align: center;
-    height: 100%;
+  }
+  .landingPage h1 {
+    font-size: 4.3rem;
+    margin-bottom: 1.5rem;
+  }
+  .landingPage p {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+  }
+  .landingPage .btn {
+    margin-inline: auto;
   }
   .landingPage__images {
-    /* overflow: visible; */
-    width: 80%;
-    /* height: 350px; */
+    grid-column: 1/ 2;
+    grid-row: 2 / 3;
   }
+  .landingPage__images img {
+    height: 20rem;
+    width: fit-content;
+  }
+
   .landingPage__images img[data-number="1"] {
     top: 0;
     left: 100%;
@@ -678,7 +696,7 @@ footer .contactUs:hover::after {
     display: flex;
   }
   .certificate {
-    min-height: calc(100vh - 4.5rem);
+    height: auto;
     padding-top: 1rem;
   }
   .certificate .container {

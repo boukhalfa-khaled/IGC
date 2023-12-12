@@ -5,9 +5,10 @@
   --color-blue: #0484c9;
   --color-green: green;
   --color-gray: #4a4a4a;
+  --color-violet: #5d50f2;
+  --form-color: rgb(0, 0, 0, 60%);
 
-  --gradient-green-start: #0f9381;
-  --gradient-green-end: #045349;
+  --gradient-green: linear-gradient(93deg, #0f9381 -22.04%, #045349 152.46%);
 
   --transition: all 300ms ease;
 
@@ -15,6 +16,7 @@
   --container-width-md: 88%;
 
   --btn-raduis: 8px;
+  --form-raduis: 12px 12px 0 0;
 }
 
 /* ==== GENERAL  ==== */
@@ -47,6 +49,19 @@ img {
   display: block;
   width: 100%;
 }
+
+form {
+}
+label {
+  color: var(--form-color);
+}
+input {
+  width: 100%;
+  border: 1px solid var(--form-color);
+  padding: 1em;
+  font-size: 14px;
+  border-radius: var(--btn-raduis);
+}
 .btn {
   display: inline-block;
   width: fit-content;
@@ -65,11 +80,10 @@ section {
 header {
   width: 100vw;
   height: 4.5rem;
-  position: fixed;
   top: 0;
   z-index: 10000;
   background: var(--color-background);
-  box-shadow: -1px 1px 15px -2px var(--color-gray);
+  /* box-shadow: -1px 1px 15px -2px var(--color-gray); */
 }
 header .container {
   height: 100%;
@@ -164,15 +178,17 @@ header .container .buttons .sign-in:hover {
   color: var(--color-gray);
   margin-bottom: 2rem;
 }
-.landingPage__content .btn {
-  background: linear-gradient(
-    to right,
-    var(--gradient-green-start),
-    var(--gradient-green-end)
-  );
+.greenGradient {
+  border: none;
+  background: var(--gradient-green);
   color: var(--color-white);
   padding: 1em 4em;
   text-transform: capitalize;
+  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.25),
+    -1px 5px 5px 0px rgba(0, 0, 0, 0.21), -2px 11px 7px 0px rgba(0, 0, 0, 0.13),
+    -3px 19px 8px 0px rgba(0, 0, 0, 0.04), -5px 30px 8px 0px rgba(0, 0, 0, 0);
+}
+.landingPage__content .btn {
 }
 .landingPage__images {
   position: relative;
@@ -203,8 +219,178 @@ header .container .buttons .sign-in:hover {
   left: 8rem;
 }
 
-* {
-  /* border: 1px solid red; */
+.certificate {
+  min-height: calc(100vh - 4.5rem);
+  padding-top: 3rem;
+}
+.certificate .container {
+  border: 1px solid var(--color-black);
+  border-radius: var(--form-raduis);
+  text-align: center;
+  padding: 3rem 0;
+  margin-bottom: 2rem;
+}
+.certificate h2 {
+  margin: 0 0 2rem;
+  color: var(--color-violet);
+  text-transform: uppercase;
+}
+.certificate p {
+  font-size: 1.25rem;
+  width: 55%;
+  /* margin-inline: auto; */
+  margin: 0 auto 4rem auto;
+}
+
+.certificate form {
+  width: 50%;
+  margin-inline: auto;
+  text-align: start;
+}
+.certificate form h3 {
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+  color: var(--color-gray);
+}
+.certificate form label {
+}
+.certificate form input {
+  margin: 0.5rem 0 1rem;
+  /* border: 1px solid var(--color-black); */
+}
+.certificate .drop-section {
+  margin-top: 0.5rem;
+  border: 1px solid var(--color-gray);
+  border-radius: var(--btn-raduis);
+  background-color: var(--color-white);
+  padding: 2rem 1rem;
+  text-align: center;
+  position: relative;
+}
+
+.certificate .drop-section div.col:first-child {
+  opacity: 1;
+  visibility: visible;
+  transition: var(--transition);
+  transform: scale(1);
+  width: 100%;
+  margin: auto;
+  text-transform: capitalize;
+}
+.certificate .drop-section div.col:first-child img {
+  width: 50px;
+  margin: auto;
+}
+.certificate .drop-section .file-selector {
+  color: var(--color-blue);
+  cursor: pointer;
+  transition: var(--transition);
+}
+.certificate .drop-section .file-selector:hover {
+  color: var(--color-violet);
+}
+
+.certificate .drop-section div.col:last-child {
+  font-size: 3rem;
+  font-weight: bold;
+  color: var(--color-gray);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  opacity: 0;
+  visibility: hidden;
+  transform: scale(0.6);
+  transition: var(--transition);
+  padding-top: 2rem;
+}
+/* i will use it in js */
+.drop-section.drag-over-effect div.col:first-child {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transform: scale(1.1);
+}
+.drop-section.drag-over-effect div.col:last-child {
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1);
+}
+
+.certificate .drop-section input {
+  display: none;
+}
+.list-section {
+  text-align: left;
+  margin: 0.5rem 0;
+  border: 1px solid var(--color-gray);
+  border-radius: var(--btn-raduis);
+  padding: 0.5rem 1rem;
+  background-color: var(--color-white);
+}
+.list-section .list-title {
+  font-size: 1rem;
+  color: var(--color-gray);
+  font-weight: bold;
+}
+.list-section li {
+  display: flex;
+  margin: 1rem 0px;
+  border-radius: var(--btn-raduis);
+  transition: var(--transition);
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
+}
+
+.list-section li .col {
+  display: flex;
+  align-items: center;
+}
+.list-section li img {
+  width: 50px;
+}
+
+.list-section li .name {
+  text-align: start;
+  padding-left: 1rem;
+  font-size: 0.9rem;
+  color: var(--color-gray);
+  overflow: hidden;
+  height: 50px;
+  text-overflow: ellipsis;
+}
+
+.list-section li .file-size {
+  width: 100px;
+  text-align: center;
+  font-size: 0.8rem;
+  color: var(--color-gray);
+}
+
+.list-section li .cross {
+  width: fit-content;
+  cursor: pointer;
+}
+.list-section li .cross:hover {
+  color: var(--color-violet);
+}
+.list-section li.on-prog {
+  display: none;
+}
+.list-section li.complete {
+  display: flex;
+}
+
+.certificate .submit {
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
 }
 
 /* ===== MEDIEM SCREEN */

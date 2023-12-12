@@ -9,6 +9,7 @@
   --form-color: rgb(0, 0, 0, 60%);
 
   --gradient-green: linear-gradient(93deg, #0f9381 -22.04%, #045349 152.46%);
+  --gradient-blue: linear-gradient(101deg, #0039e2 -31.49%, #527af2 106.89%);
 
   --transition: all 300ms ease;
 
@@ -158,7 +159,7 @@ header .container .buttons .sign-in:hover {
 .landingPage {
   /* margin-top: 14rem; */
   padding-top: 12rem;
-  height: calc(100vh - 4.5rem);
+  min-height: calc(100vh - 4.5rem);
 }
 .landingPage .container {
   display: flex;
@@ -233,7 +234,19 @@ header .container .buttons .sign-in:hover {
   padding: 3rem 0;
   margin-bottom: 2rem;
 }
-.certificate h2 {
+.h2title {
+  margin: 0 0 2rem;
+  color: var(--color-violet);
+  text-transform: uppercase;
+}
+.ptitle {
+  font-size: 1.25rem;
+  width: 55%;
+  color: var(--color-gray);
+  /* margin-inline: auto; */
+  margin: 0 auto 4rem auto;
+}
+/* .certificate h2 {
   margin: 0 0 2rem;
   color: var(--color-violet);
   text-transform: uppercase;
@@ -242,8 +255,8 @@ header .container .buttons .sign-in:hover {
   font-size: 1.25rem;
   width: 55%;
   /* margin-inline: auto; */
-  margin: 0 auto 4rem auto;
-}
+/* margin: 0 auto 4rem auto; */
+/* } */
 
 .certificate form {
   width: 50%;
@@ -396,6 +409,176 @@ header .container .buttons .sign-in:hover {
   border: none;
 }
 
+/* ======== whyUs SECTION  ======== */
+.whyUs {
+  background: var(--gradient-blue);
+  height: 560px;
+}
+.whyUs .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  color: var(--color-white);
+}
+.whyUs .container .image {
+  width: 50%;
+  display: grid;
+  place-items: center;
+}
+.whyUs .container img {
+  width: 50%;
+}
+.whyUs .container .content {
+  width: 525px;
+  min-width: 525px;
+}
+.whyUs h1 {
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  position: relative;
+}
+.whyUs h1::before {
+  content: "";
+  width: 45%;
+  height: 12px;
+  background-color: var(--color-white);
+  top: -2.25rem;
+  left: 0;
+  position: absolute;
+}
+.whyUs p {
+  /* font-size: 1rem; */
+  margin-top: 1.5rem;
+  margin-bottom: 3rem;
+}
+.whyUs li {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+  padding-left: 2rem;
+  position: relative;
+}
+.whyUs li::before {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: var(--color-white);
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+}
+
+/* ======== whyUs SECTION  ======== */
+
+/* ========= howWorks START ============ */
+.howWorks {
+  min-height: 537px;
+  height: auto;
+}
+.howWorks .container {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  padding-left: 10rem;
+  padding-right: 10rem;
+}
+
+.howWorks .container .steps {
+  max-width: 1125px;
+  width: 100%;
+  margin-inline: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(251.25px, 1fr));
+  gap: 30px;
+}
+.howWorks .container .step span {
+  font-size: 5rem;
+  font-weight: bold;
+  opacity: 0.5;
+  text-align: center;
+  text-shadow: 1px 0px 3px rgba(0, 0, 0, 0.39), 5px 1px 5px rgba(0, 0, 0, 0.34),
+    10px 3px 6px rgba(0, 0, 0, 0.2), 18px 5px 8px rgba(0, 0, 0, 0.06),
+    29px 8px 8px rgba(0, 0, 0, 0.01);
+}
+.howWorks .step h3 {
+  padding-bottom: 2rem;
+}
+.howWorks .stop p {
+  text-align: center;
+  font-size: 1rem;
+}
+
+/* ========= howWorks END ============ */
+
+/* ===== Footer Start =====*/
+footer {
+  margin-top: 15rem;
+  border-top: 3px solid rgba(0, 0, 0, 0.11);
+  height: 12.25rem;
+  position: relative;
+}
+
+footer::before {
+  content: "";
+  border-width: 12.5rem 11.5rem 11.5rem 11.5rem;
+  border-color: var(--color-blue) transparent transparent var(--color-blue);
+  border-style: solid;
+  transform: rotate(45deg);
+  border-radius: 50%;
+  position: absolute;
+  top: -12.5rem;
+  right: -9rem;
+}
+footer .container {
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+footer .accounts {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+footer .accounts a {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 1px solid black;
+}
+footer .contactUs {
+  color: var(--color-blue);
+  transition: var(--transition);
+  position: relative;
+  font-weight: bold;
+}
+footer .logo {
+  text-align: center;
+}
+
+footer .contactUs:after {
+  content: "";
+  width: 0%;
+  height: 3px;
+  left: 0;
+  bottom: -5px;
+  position: absolute;
+  background-color: var(--color-blue);
+  transition: var(--transition);
+}
+footer .contactUs:hover::after {
+  width: 100%;
+}
+
+/* ===== Footer End =====*/
+
 /* ===== MEDIEM SCREEN */
 @media screen and (max-width: 1024px) {
   /* GENERAL */
@@ -439,6 +622,14 @@ header .container .buttons .sign-in:hover {
   }
   .certificate form {
     width: 80%;
+  }
+
+  .whyUs .container .image {
+    display: none;
+  }
+  .howWorks .container {
+    padding-left: 0;
+    padding-right: 0;
   }
 }
 /* 
@@ -486,10 +677,66 @@ header .container .buttons .sign-in:hover {
   #nav__items.active {
     display: flex;
   }
-  .certificate form {
-    width: 95%;
+  .certificate {
+    min-height: calc(100vh - 4.5rem);
+    padding-top: 1rem;
+  }
+  .certificate .container {
+    padding-top: 0;
+  }
+  .certificate .container h2 {
+    margin-bottom: 2rem;
+  }
+  .certificate .container p {
+    display: none;
   }
   .certificate .container {
     border: none;
   }
+  .certificate form {
+    width: 95%;
+  }
+  .certificate form h3 {
+    margin-bottom: 0.5rem;
+    margin-top: 0.5rem;
+  }
+  /* ======== whyUs SECTION  ======== */
+  .whyUs .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    color: var(--color-white);
+  }
+  .whyUs .container .content {
+    width: 100%;
+    min-width: 0;
+  }
+  .whyUs h1 {
+    font-size: 1.2rem;
+  }
+  .whyUs p {
+    font-size: 1rem;
+    margin-bottom: 3rem;
+  }
+  .whyUs li {
+    font-size: 1rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+    padding-left: 2rem;
+    position: relative;
+  }
+  .whyUs li::before {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: var(--color-white);
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+  }
+
+  /* ======== whyUs SECTION  ======== */
 }

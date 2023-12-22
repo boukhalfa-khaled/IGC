@@ -6,6 +6,8 @@
   --color-green: green;
   --color-gray: #4a4a4a;
   --color-violet: #5d50f2;
+  --color-purple: #bd2298;
+
   --form-color: rgb(0, 0, 0, 60%);
 
   --gradient-green: linear-gradient(93deg, #0f9381 -22.04%, #045349 152.46%);
@@ -30,6 +32,9 @@
   text-decoration: none;
   box-sizing: border-box;
   font-family: "Montserrat", sans-serif;
+}
+html {
+  overflow-x: hidden;
 }
 body {
   line-height: 1.6;
@@ -82,9 +87,8 @@ header {
   width: 100vw;
   height: 4.5rem;
   top: 0;
-  z-index: 10000;
+  z-index: 100;
   background: var(--color-background);
-  /* box-shadow: -1px 1px 15px -2px var(--color-gray); */
 }
 header .container {
   height: 100%;
@@ -96,6 +100,10 @@ header .container {
 .logo {
   /* margin-right: 10rem; */
   width: 50px;
+}
+
+.showInMoblie {
+  display: none;
 }
 
 #nav__items {
@@ -138,8 +146,9 @@ header .container .buttons .btn {
 }
 
 header .container .buttons .sign-up {
-  background-color: var(--color-blue);
-  border-color: var(--color-blue);
+  /* background-color: var(--color-blue); */
+  background-color: var(--color-purple);
+  border-color: var(--color-purple);
   color: var(--color-white);
   font-weight: bold;
 }
@@ -163,26 +172,31 @@ header .container .buttons .sign-in:hover {
 }
 .landingPage .container {
   display: grid;
-  grid-template-columns: 35% 1fr;
-  grid-template-rows: 15.3rem 7rem 3.25rem 20rem;
+  grid-template-columns: 37% 1fr;
+  grid-template-rows: 24rem 3rem 7rem 3.25rem 20rem;
   column-gap: 3rem;
   justify-content: center;
   align-items: center;
   height: 100%;
 }
 .landingPage h1 {
-  font-size: 4.3rem;
+  font-size: 3rem;
   color: var(--color-blue);
   margin-bottom: 1.5rem;
+  text-transform: uppercase;
+  position: relative;
+}
+.landingPage h1 span {
+  color: var(--color-purple);
 }
 .landingPage p {
   font-size: 1rem;
   color: var(--color-gray);
   margin-bottom: 2rem;
 }
-.greenGradient {
+.purpleGradient {
   border: none;
-  background: var(--gradient-green);
+  background-color: var(--color-purple);
   color: var(--color-white);
   padding: 1em 4em;
   text-transform: capitalize;
@@ -205,7 +219,7 @@ header .container .buttons .sign-in:hover {
   left: 0;
   width: 100%;
   height: 100%;
-  overflow: hidden;
+  */overflow: hidden;
 }
 .landingPage__images img {
   width: calc(100% - 8rem);
@@ -234,6 +248,27 @@ header .container .buttons .sign-in:hover {
 .certificate {
   min-height: calc(100vh - 4.5rem);
   padding-top: 3rem;
+  position: relative;
+}
+.certificate::after {
+  content: "";
+  width: 5.5rem;
+  height: 5.5rem;
+  background-color: var(--color-purple);
+  position: absolute;
+  border-radius: 8px;
+  top: 8rem;
+  left: 0;
+}
+.certificate::before {
+  content: "";
+  width: 5.5rem;
+  height: 5.5rem;
+  background-color: var(--color-purple);
+  position: absolute;
+  border-radius: 8px;
+  top: 13.5rem;
+  left: 5.5rem;
 }
 .certificate .container {
   border: 1px solid var(--color-black);
@@ -501,7 +536,7 @@ header .container .buttons .sign-in:hover {
   width: 100%;
   margin-inline: auto;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(251.25px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
   gap: 30px;
 }
 .howWorks .container .step span {
@@ -533,13 +568,13 @@ footer {
 
 footer::before {
   content: "";
-  border-width: 12.5rem 11.5rem 11.5rem 11.5rem;
+  border-width: 11.5rem 11.5rem 11.5rem 11.5rem;
   border-color: var(--color-blue) transparent transparent var(--color-blue);
   border-style: solid;
   transform: rotate(45deg);
   border-radius: 50%;
   position: absolute;
-  top: -12.5rem;
+  top: -11.5rem;
   right: -9rem;
 }
 footer .container {
@@ -604,7 +639,7 @@ footer .contactUs:hover::after {
     text-align: center;
   }
   .landingPage h1 {
-    font-size: 4.3rem;
+    font-size: 2.5rem;
     margin-bottom: 1.5rem;
   }
   .landingPage p {
@@ -617,6 +652,7 @@ footer .contactUs:hover::after {
   .landingPage__images {
     grid-column: 1/ 2;
     grid-row: 2 / 3;
+    overflow: hidden;
   }
   .landingPage__images img {
     height: 20rem;
@@ -637,6 +673,13 @@ footer .contactUs:hover::after {
     top: 0;
     left: -100%;
     width: 100%;
+  }
+
+  .certificate::after {
+    display: none;
+  }
+  .certificate::before {
+    display: none;
   }
   .certificate form {
     width: 80%;
@@ -676,25 +719,69 @@ footer .contactUs:hover::after {
     font-weight: bold;
     cursor: pointer;
   }
+
   #open__items-btn.active span {
     color: var(--color-blue);
   }
   #nav__items {
     display: none;
     position: absolute;
-    top: 100%;
+    top: 0;
     right: 0;
     background-color: var(--color-background);
-    gap: 1rem;
+    gap: 3.44rem;
     flex-direction: column;
-    width: 200px;
-    height: 150px;
-    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    z-index: 90000;
     box-shadow: -1px 7px 7px var(--color-gray);
+    padding-top: 2rem;
   }
+
+  #nav__items li {
+    /* font-size: 1.25rem; */
+    /* font-weight: 600; */
+  }
+  #nav__items li a {
+    color: var(--color-black);
+    font-weight: 600;
+    font-size: 1.25rem;
+    text-transform: uppercase;
+  }
+  .close__items-btn {
+    display: block;
+    position: absolute;
+    right: 1.5rem;
+    top: 1.5rem;
+    color: var(--color-purple);
+    background: none;
+    cursor: pointer;
+  }
+
+  .close__items-btn rect {
+    transition: var(--transition);
+  }
+
+  .close__items-btn:hover rect {
+    fill: var(--color-purple);
+  }
+  #nav__items .logo {
+    display: block;
+  }
+
   #nav__items.active {
     display: flex;
   }
+
+  .landingPage h1 {
+    font-size: 2.4rem;
+  }
+
+  header .buttons {
+    display: none;
+  }
+
   .certificate {
     height: auto;
     padding-top: 1rem;
@@ -717,6 +804,20 @@ footer .contactUs:hover::after {
   .certificate form h3 {
     margin-bottom: 0.5rem;
     margin-top: 0.5rem;
+  }
+  .certificate .drop-section {
+    border: none;
+    background-color: var(--color-background);
+    padding: 0;
+  }
+  .hideInMobile {
+    display: none;
+  }
+  .certificate .drop-section .file-selector {
+    font-weight: bold;
+  }
+  .certificate form .submit {
+    width: 100%;
   }
   /* ======== whyUs SECTION  ======== */
   .whyUs .container {

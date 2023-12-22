@@ -30,4 +30,4 @@ function updateDataNumber() {
 }
 
 // Set up an interval to change images every 1 second
-setInterval(updateDataNumber, 3000);
+setInterval(updateDataNumber, 5000);

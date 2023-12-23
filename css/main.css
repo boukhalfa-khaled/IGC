@@ -85,7 +85,7 @@ section {
 /* ------ Header --------- */
 header {
   width: 100vw;
-  height: 4.5rem;
+  height: 6.5rem;
   top: 0;
   z-index: 100;
   background: var(--color-background);
@@ -99,7 +99,7 @@ header .container {
 
 .logo {
   /* margin-right: 10rem; */
-  width: 50px;
+  width: 5.5rem;
 }
 
 .showInMoblie {
@@ -230,6 +230,8 @@ header .container .buttons .sign-in:hover {
   top: 0;
   left: 0;
   transition: var(--transition);
+  border: 1px solid var(--color-black);
+  border-radius: var(--btn-raduis) var(--btn-raduis) 0 0;
 }
 .landingPage__images img[data-number="1"] {
   z-index: 1;
@@ -594,7 +596,10 @@ footer .accounts a {
   height: 2.5rem;
   border-radius: 50%;
   overflow: hidden;
-  border: 1px solid black;
+  /* border: 1px solid black; */
+}
+footer .accounts a img {
+  width: 2.5rem;
 }
 footer .contactUs {
   color: var(--color-blue);
@@ -657,6 +662,7 @@ footer .contactUs:hover::after {
   .landingPage__images img {
     height: 20rem;
     width: fit-content;
+    border: none;
   }
 
   .landingPage__images img[data-number="1"] {
@@ -724,10 +730,10 @@ footer .contactUs:hover::after {
     color: var(--color-blue);
   }
   #nav__items {
-    display: none;
+    display: flex;
     position: absolute;
     top: 0;
-    right: 0;
+    right: -100vw;
     background-color: var(--color-background);
     gap: 3.44rem;
     flex-direction: column;
@@ -737,6 +743,7 @@ footer .contactUs:hover::after {
     z-index: 90000;
     box-shadow: -1px 7px 7px var(--color-gray);
     padding-top: 2rem;
+    transition: var(--transition);
   }
 
   #nav__items li {
@@ -771,7 +778,8 @@ footer .contactUs:hover::after {
   }
 
   #nav__items.active {
-    display: flex;
+    /* display: flex; */
+    right: 0;
   }
 
   .landingPage h1 {

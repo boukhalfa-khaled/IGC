@@ -39,7 +39,7 @@ html {
 body {
   line-height: 1.6;
   background: var(--color-background);
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 .container {
@@ -311,7 +311,7 @@ header .container .buttons .sign-in:hover {
 .certificate form h3 {
   margin-bottom: 2rem;
   margin-top: 2rem;
-  color: var(--color-gray);
+  color: var(--color-black);
 }
 .certificate form label {
 }

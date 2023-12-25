@@ -44,7 +44,8 @@ body {
 
 .container {
   width: var(--container-width-lg);
-  max-width: 1800px;
+  max-width: 1215.44672px;
+  /* max-width: 1800px; */
   margin-inline: auto;
 }
 a {
@@ -141,7 +142,7 @@ header .container .buttons {
 }
 
 header .container .buttons .btn {
-  padding: 1em 2em;
+  /* padding: 1em 2em; */
   text-transform: uppercase;
 }
 
@@ -153,11 +154,11 @@ header .container .buttons .sign-up {
   font-weight: bold;
 }
 
-header .container .buttons .sign-in {
+/* header .container .buttons .sign-in {
   border: none;
   background-color: var(--color-background);
   font-weight: bold;
-}
+} */
 header .container .buttons .sign-in:hover {
   color: var(--color-blue);
 }
@@ -167,22 +168,24 @@ header .container .buttons .sign-in:hover {
 /* --- LANDING PAGE ---- */
 .landingPage {
   /* margin-top: 14rem; */
-  padding-top: 8rem;
-  min-height: calc(100vh - 4.5rem);
+  padding-top: 6.25rem;
+  /* min-height: calc(100vh - 6.5rem); */
+  height: 45.125rem;
 }
 .landingPage .container {
   display: grid;
-  grid-template-columns: 37% 1fr;
-  grid-template-rows: 24rem 3rem 7rem 3.25rem 20rem;
-  column-gap: 3rem;
+  grid-template-columns: 28.375rem 36.615rem;
+  grid-template-rows: 19.25rem 5.25rem 7rem 3.25rem 20rem;
+  column-gap: 5rem;
   justify-content: center;
   align-items: center;
   height: 100%;
 }
 .landingPage h1 {
   font-size: 3rem;
+  font-weight: 700;
   color: var(--color-blue);
-  margin-bottom: 1.5rem;
+  padding-bottom: 1.5rem;
   text-transform: uppercase;
   position: relative;
 }
@@ -190,9 +193,10 @@ header .container .buttons .sign-in:hover {
   color: var(--color-purple);
 }
 .landingPage p {
+  /* padding-top: 3rem; */
   font-size: 1rem;
-  color: var(--color-gray);
-  margin-bottom: 2rem;
+  color: var(--color-black);
+  /* margin-bottom: 2rem; */
 }
 .purpleGradient {
   border: none;
@@ -208,6 +212,7 @@ header .container .buttons .sign-in:hover {
 .landingPage .btn a {
   color: var(--color-white);
   font-weight: bold;
+  font-size: 1rem;
 }
 .landingPage .btn {
 }
@@ -219,10 +224,10 @@ header .container .buttons .sign-in:hover {
   left: 0;
   width: 100%;
   height: 100%;
-  */overflow: hidden;
+  overflow: hidden;
 }
 .landingPage__images img {
-  width: calc(100% - 8rem);
+  width: 28.125rem;
   object-fit: contain;
   /* width: fit-content; */
   /* height: calc(100% - 8rem); */
@@ -238,13 +243,13 @@ header .container .buttons .sign-in:hover {
 }
 .landingPage__images img[data-number="2"] {
   z-index: 2;
-  top: 4rem;
-  left: 4rem;
+  top: 4.94rem;
+  left: 5rem;
 }
 .landingPage__images img[data-number="3"] {
   z-index: 3;
-  top: 8em;
-  left: 8rem;
+  top: 9.12rem;
+  left: 8.49rem;
 }
 
 .certificate {
@@ -278,6 +283,7 @@ header .container .buttons .sign-in:hover {
   text-align: center;
   padding: 3rem 0;
   margin-bottom: 2rem;
+  max-width: 61.75rem;
 }
 .h2title {
   margin: 0 0 2rem;
@@ -286,7 +292,8 @@ header .container .buttons .sign-in:hover {
 }
 .ptitle {
   font-size: 1.25rem;
-  width: 55%;
+  /* width: 55%; */
+  max-width: 49.81rem;
   color: var(--color-gray);
   /* margin-inline: auto; */
   margin: 0 auto 4rem auto;
@@ -304,7 +311,8 @@ header .container .buttons .sign-in:hover {
 /* } */
 
 .certificate form {
-  width: 50%;
+  /* width: 50%; */
+  width: 31.25rem;
   margin-inline: auto;
   text-align: start;
 }
@@ -531,17 +539,21 @@ header .container .buttons .sign-in:hover {
   text-align: center;
   padding-top: 5rem;
   padding-bottom: 5rem;
-  padding-left: 10rem;
-  padding-right: 10rem;
+  /* padding-left: 10rem; */
+  /* padding-right: 10rem; */
 }
 
 .howWorks .container .steps {
-  max-width: 1125px;
+  /* max-width: 1125px; */
   width: 100%;
   margin-inline: auto;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
-  gap: 30px;
+  place-items: center;
+  grid-template-columns: repeat(auto-fill, minmax(15.7rem, 1fr));
+  gap: 2.5rem;
+}
+.howWorks .container .step {
+  width: 15.70313rem;
 }
 .howWorks .container .step span {
   font-size: 5rem;
@@ -636,18 +648,19 @@ footer .contactUs:hover::after {
     width: var(--container-width-md);
   }
   .landingPage {
-    padding-top: 1rem;
+    padding-top: 0rem;
+    height: 100vh;
   }
 
   .landingPage .container {
     grid-template-columns: 1fr;
-    grid-template-rows: 15.3rem 25rem 3.25rem 7rem;
+    grid-template-rows: 12rem 23rem 3.25rem 7rem;
     column-gap: 0;
     text-align: center;
   }
   .landingPage h1 {
     font-size: 2.5rem;
-    margin-bottom: 1.5rem;
+    /* margin-bottom: 0rem; */
   }
   .landingPage p {
     font-size: 1rem;

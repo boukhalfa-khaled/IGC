@@ -189,6 +189,12 @@ header .container .buttons .sign-in:hover {
   text-transform: uppercase;
   position: relative;
 }
+.landingPage h1 img {
+  position: absolute;
+  width: 6rem;
+  top: -3rem;
+  right: -2rem;
+}
 .landingPage h1 span {
   color: var(--color-purple);
 }
@@ -542,6 +548,18 @@ header .container .buttons .sign-in:hover {
   /* padding-left: 10rem; */
   /* padding-right: 10rem; */
 }
+.howWorks h2 {
+  position: relative;
+  width: fit-content;
+  margin-inline: auto;
+}
+
+.howWorks h2 img {
+  position: absolute;
+  width: 4rem;
+  top: -2.5rem;
+  right: -4rem;
+}
 
 .howWorks .container .steps {
   /* max-width: 1125px; */
@@ -654,13 +672,17 @@ footer .contactUs:hover::after {
 
   .landingPage .container {
     grid-template-columns: 1fr;
-    grid-template-rows: 12rem 23rem 3.25rem 7rem;
+    grid-template-rows: 10rem 23rem 3.25rem 7rem;
     column-gap: 0;
     text-align: center;
   }
   .landingPage h1 {
     font-size: 2.5rem;
     /* margin-bottom: 0rem; */
+  }
+
+  .landingPage h1 img {
+    display: none;
   }
   .landingPage p {
     font-size: 1rem;
@@ -798,7 +820,11 @@ footer .contactUs:hover::after {
   }
 
   .landingPage h1 {
-    font-size: 2.4rem;
+    font-size: 1.8rem;
+  }
+  .landingPage p {
+    width: 80%;
+    margin-inline: auto;
   }
 
   header .buttons {

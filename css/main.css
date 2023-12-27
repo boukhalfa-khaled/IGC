@@ -496,6 +496,8 @@ header .container .buttons .sign-in:hover {
 .howWorks {
   min-height: 537px;
   height: auto;
+  border-bottom: 1px solid black;
+  margin-bottom: 3rem;
 }
 .howWorks .container {
   display: flex;

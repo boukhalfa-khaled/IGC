@@ -54,7 +54,6 @@ function typeValidation(type) {
   }
 }
 function uploadFile(file) {
-  // console.log(file);
   // Do Uploading
   listSection.style.display = "block";
   var li = document.createElement("li");

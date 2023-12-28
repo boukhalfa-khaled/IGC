@@ -33,6 +33,7 @@
 }
 html {
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 body {
   line-height: 1.6;
@@ -98,7 +99,6 @@ input {
 header {
   width: 100vw;
   height: 6.5rem;
-  top: 0;
   z-index: 100;
   background: var(--color-background);
 }
@@ -141,7 +141,7 @@ header .container {
 }
 
 header .container .buttons .btn {
-  text-transform: uppercase;
+  text-transform: capitalize;
   font-weight: bold;
 }
 
@@ -560,14 +560,14 @@ footer {
 
 footer::before {
   content: "";
-  border-width: 11.5rem 11.5rem 11.5rem 11.5rem;
-  border-color: var(--color-blue) transparent transparent var(--color-blue);
-  border-style: solid;
-  transform: rotate(45deg);
-  border-radius: 50%;
+  background-color: var(--color-blue);
   position: absolute;
+  width: 23rem;
+  height: 11.5rem;
+  border-top-left-radius: 11.5rem;
+  border-top-right-radius: 11.5rem;
   top: -11.5rem;
-  right: -9rem;
+  right: -8.5rem;
 }
 footer .container {
   height: 100%;
@@ -625,7 +625,7 @@ footer .contactUs:hover::after {
   }
   .landingPage {
     padding-top: 0rem;
-    height: 100vh;
+    height: 47.125rem;
   }
 
   .landingPage .container {

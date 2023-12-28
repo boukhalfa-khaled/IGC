@@ -15,10 +15,6 @@ openItemsBtn.onclick = function () {
 };
 
 const imageArray = Array.from(document.querySelectorAll("img[data-number]"));
-const pullets = Array.from(
-  document.querySelectorAll(".landingPage span[data-number]")
-);
-console.log(pullets);
 
 function updateDataNumber() {
   imageArray.forEach((image) => {

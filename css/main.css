@@ -386,7 +386,7 @@ header .container .buttons .sign-in:hover {
   align-items: center;
 }
 .list-section li img {
-  width: 50px;
+  width: 40px;
 }
 
 .list-section li .name {
@@ -408,7 +408,11 @@ header .container .buttons .sign-in:hover {
 
 .list-section li .cross {
   width: fit-content;
+  /* width: 5px; */
   cursor: pointer;
+}
+.list-section li .cross img {
+  width: 1rem;
 }
 .list-section li .cross:hover {
   color: var(--color-violet);

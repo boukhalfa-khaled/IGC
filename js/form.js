@@ -71,7 +71,7 @@ function uploadFile(file) {
             ? (file.size / (1024 * 1024)).toFixed(2) + " MB"
             : (file.size / 1024).toFixed(2) + " KB"
         }</div>
-        <span class="cross"><img src="assets/true.png" alt=""></span>
+        <span class="cross"><img src="./assets/true.png" alt=""></span>
       </div>
   `;
   listContainer.prepend(li);

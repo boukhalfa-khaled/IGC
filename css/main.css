@@ -21,6 +21,8 @@
   --form-raduis: 12px 12px 0 0;
 }
 
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
 /* ==== GENERAL  ==== */
 * {
   margin: 0;
@@ -96,6 +98,22 @@ input {
     -3px 19px 8px 0px rgba(0, 0, 0, 0.04), -5px 30px 8px 0px rgba(0, 0, 0, 0);
   height: 3.25rem;
 }
+
+.bigTitle h1 {
+  color: var(--color-white);
+  font-size: 3rem;
+  font-weight: 700;
+  text-transform: capitalize;
+  position: relative;
+}
+.bigTitle h1 img {
+  position: absolute;
+  transform: rotate(-90deg);
+  width: 4rem;
+  top: -2.5rem;
+  left: -4rem;
+}
+
 /* ------ Header --------- */
 header {
   width: 100vw;
@@ -535,27 +553,31 @@ header .container .buttons .sign-in:hover {
   line-height: 22.43px;
 }
 .howWorks .container .step span {
-  font-size: 5rem;
+  font-size: 80px;
   font-weight: bold;
   opacity: 0.5;
   text-align: center;
   text-shadow: 1px 0px 3px rgba(0, 0, 0, 0.39), 5px 1px 5px rgba(0, 0, 0, 0.34),
     10px 3px 6px rgba(0, 0, 0, 0.2), 18px 5px 8px rgba(0, 0, 0, 0.06),
     29px 8px 8px rgba(0, 0, 0, 0.01);
+  font-family: "Poppins", sans-serif;
 }
 .howWorks .step h3 {
+  padding-top: 2rem;
   padding-bottom: 2rem;
+  font-size: 1rem;
 }
-.howWorks .stop p {
+.howWorks .step p {
   text-align: center;
   font-size: 1rem;
+  height: 100px;
 }
 
 /* ========= howWorks END ============ */
 
 /* ===== Footer Start =====*/
 footer {
-  margin-top: 5rem;
+  margin-top: 7.75rem;
   border-top: 3px solid rgba(0, 0, 0, 0.11);
   padding-top: 2rem;
   padding-bottom: 1.5rem;
@@ -564,6 +586,17 @@ footer {
   background-color: var(--color-footer);
 }
 
+/* footer::before {
+content: "";
+background-color: var(--color-blue);
+position: absolute;
+width: 23rem;
+height: 11.5rem;
+border-top-left-radius: 11.5rem;
+border-top-right-radius: 11.5rem;
+top: -11.5rem;
+right: -8.5rem;
+} */
 footer .container .up {
   height: 50%;
   display: flex;
@@ -639,6 +672,111 @@ footer .down .links a {
 }
 
 /* ===== Footer End =====*/
+/* ====== Start of Pravacy and Policy   ======== */
+.policy .bigTitle {
+  margin-top: 5rem;
+  margin-bottom: 6.25rem;
+  padding: 3.75rem 0;
+  background-color: var(--color-blue);
+}
+.policy .bigTitle .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.policy .content .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 4rem;
+}
+.policy .content .hunk {
+  display: flex;
+  /* justify-content: center; */
+  /* align-items: center; */
+  flex-direction: column;
+}
+.policy .content .hunk h2 {
+  color: var(--color-blue);
+  font-size: 2.5rem;
+  font-weight: 700;
+  letter-spacing: 0.05rem;
+  text-transform: capitalize;
+  margin-bottom: 2.75rem;
+}
+.policy .content .hunk p {
+  color: var(--color-black);
+  font-size: 1.125rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 2.5rem;
+  letter-spacing: 0.0675rem;
+  padding-left: 2rem;
+}
+
+.policy .content .hunk p .blue {
+  color: var(--color-blue);
+}
+
+.policy .content .hunk p + p {
+  margin-top: 1rem;
+}
+/* ====== End of Pravacy and Policy   ======== */
+/* ====== start of FAQs   ======== */
+.faq .bigTitle {
+  margin-top: 5rem;
+  margin-bottom: 6.25rem;
+  padding: 3.75rem 0;
+  background-color: var(--color-blue);
+  color: var(--color-white);
+}
+.faq .bigTitle .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.faq .content .container {
+  max-width: 54.875rem;
+  background-color: var(--color-white);
+  border-radius: var(--form-raduis);
+  padding: 5.94rem 5.63rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+.faq .content .hunk {
+  border-bottom: 1px solid #594f4f;
+  padding: 0 calc(8.09rem - 5.63rem);
+}
+.faq .content .hunk:last-child {
+  border: none;
+}
+.faq .content .hunk .title {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.81rem;
+}
+.faq .content .hunk .title.active {
+  color: var(--color-blue);
+}
+.faq .content .hunk p {
+  padding-right: 2.69rem;
+  margin-bottom: 1.87rem;
+  height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: var(--transition);
+  transition-delay: 100ms;
+}
+.faq .content .hunk:hover p {
+  height: fit-content;
+  opacity: 1;
+}
+
+/* ====== End of FAQs   ======== */
 
 /* ===== MEDIEM SCREEN */
 @media screen and (max-width: 1024px) {
@@ -715,6 +853,10 @@ footer .down .links a {
   .howWorks .container {
     padding-left: 0;
     padding-right: 0;
+  }
+
+  .howWorks h2 img {
+    display: none;
   }
   footer {
     height: 300px;
@@ -890,7 +1032,6 @@ footer .down .links a {
   }
 
   /* ======== whyUs SECTION  ======== */
-
   footer {
     height: 350px;
   }

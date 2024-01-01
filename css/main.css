@@ -6,6 +6,7 @@
   --color-gray: #4a4a4a;
   --color-violet: #5d50f2;
   --color-purple: #bd2298;
+  --color-footer: #29303b;
 
   --form-color: rgb(0, 0, 0, 60%);
 
@@ -500,8 +501,6 @@ header .container .buttons .sign-in:hover {
 .howWorks {
   min-height: 537px;
   height: auto;
-  border-bottom: 1px solid black;
-  margin-bottom: 3rem;
 }
 .howWorks .container {
   display: flex;
@@ -556,28 +555,21 @@ header .container .buttons .sign-in:hover {
 
 /* ===== Footer Start =====*/
 footer {
-  margin-top: 15rem;
+  margin-top: 5rem;
   border-top: 3px solid rgba(0, 0, 0, 0.11);
-  height: 12.25rem;
+  padding-top: 2rem;
+  padding-bottom: 1.5rem;
+  height: 227px;
   position: relative;
+  background-color: var(--color-footer);
 }
 
-footer::before {
-  content: "";
-  background-color: var(--color-blue);
-  position: absolute;
-  width: 23rem;
-  height: 11.5rem;
-  border-top-left-radius: 11.5rem;
-  border-top-right-radius: 11.5rem;
-  top: -11.5rem;
-  right: -8.5rem;
-}
-footer .container {
-  height: 100%;
+footer .container .up {
+  height: 50%;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 2rem;
 }
 footer .accounts {
   display: flex;
@@ -586,23 +578,24 @@ footer .accounts {
   gap: 0.5rem;
 }
 footer .accounts a {
-  width: 2.5rem;
-  height: 2.5rem;
+  width: 40.57px;
+  height: 40.57px;
   border-radius: 50%;
   overflow: hidden;
-  /* border: 1px solid black; */
 }
 footer .accounts a img {
-  width: 2.5rem;
+  width: 100%;
 }
 footer .contactUs {
-  color: var(--color-blue);
+  color: var(--color-white);
   transition: var(--transition);
   position: relative;
   font-weight: bold;
+  font-size: 20px;
 }
 footer .logo {
   text-align: center;
+  width: 116px;
 }
 
 footer .contactUs:after {
@@ -615,8 +608,34 @@ footer .contactUs:after {
   background-color: var(--color-blue);
   transition: var(--transition);
 }
+footer .contactUs:hover {
+  color: var(--color-blue);
+}
 footer .contactUs:hover::after {
   width: 100%;
+}
+
+footer .container .down {
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+footer .down p {
+  color: var(--color-white);
+  font-size: 20px;
+  font-weight: 600;
+}
+footer .down .links {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+footer .down .links a {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--color-blue);
 }
 
 /* ===== Footer End =====*/
@@ -696,6 +715,16 @@ footer .contactUs:hover::after {
   .howWorks .container {
     padding-left: 0;
     padding-right: 0;
+  }
+  footer {
+    height: 300px;
+  }
+  footer .container .down {
+    flex-direction: column-reverse;
+    gap: 2rem;
+  }
+  footer .down .links a {
+    font-size: 1.2rem;
   }
 }
 /* 
@@ -861,4 +890,100 @@ footer .contactUs:hover::after {
   }
 
   /* ======== whyUs SECTION  ======== */
+
+  footer {
+    height: 350px;
+  }
+  footer .accounts a {
+    width: 35px;
+  }
+  footer .logo {
+    width: 80px;
+  }
+  footer .contactUs {
+    font-size: 1rem;
+  }
+  footer .container .down {
+    flex-direction: column-reverse;
+    gap: 2rem;
+  }
+  footer .down .links {
+    gap: 8px;
+    flex-direction: column;
+  }
+  footer .down p {
+    font-size: 1rem;
+  }
+}
+.alert {
+  padding: 10px 15px;
+  margin-bottom: 20px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  position: relative;
+  width: 100%;
+  left: 0;
+  right: 0;
+  text-align: center;
+}
+
+.alert-success {
+  color: #155724;
+  background-color: #d4edda;
+  border-color: #c3e6cb;
+}
+
+.alert-danger,
+.alert-danger ul {
+  color: #721c24;
+  background-color: #f8d7da;
+  border-color: #f5c6cb;
+}
+
+/* Alert message list style */
+.alert-danger ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.error {
+  color: #ff0000; /* Red */
+  font-size: 0.8em; /* Adjust size as needed */
+}
+.alert {
+  padding: 10px 15px;
+  margin-bottom: 20px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  position: relative;
+  width: 100%;
+  left: 0;
+  right: 0;
+  text-align: center;
+}
+
+.alert .alert-success {
+  color: #155724;
+  background-color: #d4edda;
+  border-color: #c3e6cb;
+}
+
+.alert-danger,
+.alert-danger ul {
+  color: #721c24;
+  background-color: #f8d7da;
+  border-color: #f5c6cb;
+}
+
+/* Alert message list style */
+.alert-danger ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.error {
+  color: #ff0000; /* Red */
+  font-size: 0.8em; /* Adjust size as needed */
 }

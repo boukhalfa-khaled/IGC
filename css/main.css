@@ -349,7 +349,7 @@ header .container .buttons .sign-in:hover {
   max-width: 61.75rem;
 }
 .h2title {
-  margin: 0 0 2rem;
+  margin: 0 0 1rem;
   color: var(--color-violet);
   text-transform: uppercase;
 }

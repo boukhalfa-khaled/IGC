@@ -13,6 +13,11 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
       rel="stylesheet"
     />
+    <!-- ICONSCOUT CDN -->
+    <link
+      rel="stylesheet"
+      href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"
+    />
   </head>
   <body>
     <header>
@@ -22,39 +27,41 @@
         /></a>
         <ul id="nav__items" class="nav__items">
           <button class="close__items-btn showInMoblie">
-            <svg
-              width="15"
-              height="14"
-              viewBox="0 0 15 14"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <rect
-                width="18.3049"
-                height="2.03388"
-                rx="1.01694"
-                transform="matrix(0.7375 0.675348 -0.7375 0.675348 1.5 0)"
-                fill="black"
-              />
-              <rect
-                width="18.3049"
-                height="2.03388"
-                rx="1.01694"
-                transform="matrix(0.7375 -0.675348 0.7375 0.675348 0 12.6265)"
-                fill="black"
-              />
-            </svg>
+            <i class="uil uil-times"></i>
           </button>
           <a class="logo showInMoblie" href="./index.html"
             ><img src="./assets/logo.png" alt=""
           /></a>
-          <li><a href="./index.html">Home</a></li>
-          <li><a href="#howWorks">About</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li>
+            <a href="./index.html"
+              ><img src="assets/navIcons/home.svg" alt="" />Home</a
+            >
+          </li>
+          <li>
+            <a href="./aboutUs.html"
+              ><img src="assets/navIcons/about.svg" alt="" />About</a
+            >
+          </li>
+          <li>
+            <a href="#certifcate"
+              ><img
+                src="assets/navIcons/certificate.svg"
+                alt=""
+              />certificate</a
+            >
+          </li>
+          <li>
+            <a href="#contact"
+              ><img src="assets/navIcons/contact.svg" alt="" />Contact</a
+            >
+          </li>
         </ul>
         <div class="buttons">
-          <button class="btn purpleGradient">Apply Now</button>
+          <button class="btn purpleGradient">Creat Your Certificate</button>
         </div>
+        <!-- <div id="open__items-btn" class="active">
+          <i class="uil uil-bars"></i>
+        </div> -->
         <div id="open__items-btn" class="active">
           <span>|</span>
           <span>|</span>
@@ -71,6 +78,9 @@
           unlock new opportunities with our certificate , show off your skill
           and expertise to the world.
         </p>
+        <a class="LearnMore" href="./form.html">
+          Learn More <img src="assets/Arrow 1.svg" alt="" />
+        </a>
         <button class="btn purpleGradient">
           <a href="form.html">create your certificate</a>
         </button>
@@ -81,22 +91,50 @@
         </div>
       </div>
     </section>
+    <section class="statistics">
+      <div class="container">
+        <div class="col">
+          <div class="number">+47</div>
+          <div class="text">LOREM Ipsum frit Omlet</div>
+        </div>
+        <div class="col">
+          <div class="number">+1500</div>
+          <div class="text">LOREM Ipsum frit Omlet</div>
+        </div>
+        <div class="col">
+          <div class="number">+20</div>
+          <div class="text">LOREM Ipsum frit Omlet</div>
+        </div>
+      </div>
+    </section>
     <section class="whyUs">
       <div class="container">
-        <div class="image">
-          <img src="./assets/section2.png" alt="" />
-        </div>
-        <div class="content">
-          <h1>why choose our certififcate?</h1>
-          <p>
-            Elevate your career with IGC – swift certification, instant
-            recognition. Our seamless process propels your skills forward.
-          </p>
-          <ul>
-            <li>open to all</li>
-            <li>trustworthy</li>
-            <li>Real Appreciation</li>
-          </ul>
+        <h2>why You should choose us</h2>
+        <div class="cards">
+          <div class="card">
+            <img src="assets/cards/openToAll.png" alt="" />
+            <div class="title">Open to All:</div>
+            <p>
+              our services are inclusive and accissible To everyone. We believe
+              in providing
+            </p>
+          </div>
+          <div class="card">
+            <img src="assets/cards/trustWorthy.png" alt="" />
+            <div class="title">TrustWorthy:</div>
+            <p>
+              Built on a foundation of trust, we prioritize transparency and
+              reliability.
+            </p>
+          </div>
+          <div class="card">
+            <img src="assets/cards/realAppreciation.png" alt="" />
+            <div class="title">real appreciation:</div>
+            <p>
+              Experience genuine and heartfelt appreciation for your skills and
+              efforts.
+            </p>
+          </div>
         </div>
       </div>
     </section>
@@ -104,7 +142,7 @@
       <div class="container">
         <h2 class="h2title">
           How it works?
-          <img src="./assets/svgIcons/howItWorks.svg" alt="" />
+          <!-- <img src="./assets/svgIcons/howItWorks.svg" alt="" /> -->
         </h2>
         <p class="ptitle">
           Follow this simple steps to obtain your certificate :
@@ -131,6 +169,112 @@
             <span>4</span>
             <h3>receive</h3>
             <p>if approved, you will recieve your certificate via email.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="faq">
+      <div style="text-align: center" class="container">
+        <p class="faqTitle">FAQ</p>
+        <h2 class="h2title">
+          frequently asked questions
+          <img src="./assets/svgIcons/howItWorks.svg" alt="" />
+        </h2>
+        <p class="ptitle">have questions ?we’re here to help</p>
+      </div>
+      <div class="content">
+        <div class="container">
+          <div class="hunk">
+            <div class="title">
+              <h3>
+                What types of certifications does the Internati onal General
+                Certification Center offer?
+              </h3>
+              <div class="icon">
+                <span></span>
+                <span></span>
+              </div>
+            </div>
+            <p>
+              IGCCenter offers certifications in various fields, assessing
+              skills and competencies through a rigorous testing process. These
+              certifications include individual testing, job testing, and
+              continuous training opportunities.
+            </p>
+          </div>
+
+          <div class="hunk">
+            <div class="title">
+              <h3>
+                How does the testing process work for individuals and job
+                positions?
+              </h3>
+              <div class="icon">
+                <span></span>
+                <span></span>
+              </div>
+            </div>
+            <p>
+              The testing process involves written and oral examinations, as
+              well as a practical component for individual testing. For job
+              testing, IGCCenter helps in selecting appropriate competencies
+              through rigorous tests showcasing applicants' competence for
+              specific positions.
+            </p>
+          </div>
+          <div class="hunk">
+            <div class="title">
+              <h3>
+                What are the benefits of obtaining certification from IGCCenter?
+              </h3>
+              <div class="icon">
+                <span></span>
+                <span></span>
+              </div>
+            </div>
+            <p>
+              Benefits include official recognition, access to diverse career
+              opportunities, industry insights, flexibility with online testing,
+              and continuous development opportunities through partnerships with
+              educational centers.
+            </p>
+          </div>
+          <div class="hunk">
+            <div class="title">
+              <h3>
+                How does IGCCenter connect individuals with career opportunities
+                and employers?
+              </h3>
+              <div class="icon">
+                <span></span>
+                <span></span>
+              </div>
+            </div>
+            <p>
+              Certified individuals are connected with potential employers and
+              clients through the platform, showcasing their skills and
+              experience. Employers benefit by accessing a pool of qualified
+              candidates certified by IGCCenter.
+            </p>
+          </div>
+
+          <div class="hunk">
+            <div class="title">
+              <h3>
+                Is the testing process biased, and how does IGCCenter ensure
+                fairness and inclusiveness?
+              </h3>
+              <div class="icon">
+                <span></span>
+                <span></span>
+              </div>
+            </div>
+            <p>
+              IGCCenter is committed to fairness and inclusiveness, designing
+              its testing process to be free of bias and discrimination. Every
+              candidate is treated with respect, and the platform upholds the
+              values of equity and transparency.
+            </p>
           </div>
         </div>
       </div>
@@ -197,7 +341,7 @@
         </form>
       </div>
     </section> -->
-    <footer id="contact">
+    <!-- <footer id="contact">
       <div class="container">
         <div class="up">
           <div class="accounts">
@@ -220,8 +364,68 @@
           </div>
         </div>
       </div>
+    </footer> -->
+    <footer>
+      <div class="container">
+        <div class="up">
+          <a class="logo" href="./index.html"
+            ><img src="assets/logo.png" alt=""
+          /></a>
+          <div class="info">
+            <h3>INTERNATIONAL GENERAL CERTIFICATION CENTER</h3>
+            <p>Ltd. Registered in England and Wales No: 15377750</p>
+          </div>
+        </div>
+        <div class="middle">
+          <div class="socials">
+            <div class="title">socials</div>
+            <ul>
+              <a href="google.com"
+                ><img src="assets/socials/google.svg" alt=""
+              /></a>
+              <a href="telegram.com"
+                ><img src="assets/socials/telegram.svg" alt=""
+              /></a>
+              <a href="whatsApp.com"
+                ><img src="assets/socials/whatsApp.svg" alt=""
+              /></a>
+              <a href="facebook.com"
+                ><img src="assets/socials/facebook.svg" alt=""
+              /></a>
+            </ul>
+          </div>
+
+          <div class="support">
+            <div class="title">support</div>
+            <ul>
+              <a href="">Email</a>
+              <a href="">FAQ</a>
+              <a href="">+44000000</a>
+            </ul>
+          </div>
+
+          <div class="company">
+            <div class="title">company</div>
+            <ul>
+              <a href="">about us</a>
+              <a href="">terms & conditions</a>
+              <a href="">privacy policy</a>
+            </ul>
+          </div>
+        </div>
+        <div class="down">
+          <div class="copyright">Copyright © 2024 igc center.</div>
+          <div class="icons">
+            <a href=""
+              ><img src="assets/Payment Method/Mastercard.svg" alt=""
+            /></a>
+            <a href=""><img src="assets/Payment Method/PayPal.svg" alt="" /></a>
+            <a href=""><img src="assets/Payment Method/Visa.svg" alt="" /></a>
+          </div>
+        </div>
+      </div>
     </footer>
-    <script src="js/form.js"></script>
+    <script src="js/faq.js"></script>
     <script src="js/main.js"></script>
   </body>
 </html>

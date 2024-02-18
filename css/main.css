@@ -387,6 +387,13 @@ header .container .buttons .sign-in:hover {
 
 .whyUs .container {
   padding: 5rem 0;
+  position: relative;
+}
+.whyUs img.arrow {
+  position: absolute;
+  bottom: -2rem;
+  right: 5rem;
+  width: 2rem;
 }
 .whyUs h2 {
   font-size: 1.5rem;
@@ -1060,6 +1067,9 @@ footer .down .icons a {
   /* end statistics */
 
   /* whyUs SECTION  */
+  .whyUs img.arrow {
+    display: none;
+  }
   /* whyUs SECTION  */
 
   /* Footer Start */

@@ -6,6 +6,8 @@
     <title>IGC Certificate</title>
     <link rel="icon" type="image/x-icon" href="/assets/logo.png" />
     <link rel="stylesheet" href="css/main.css" />
+    <!-- animation script -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <!-- google font -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -59,9 +61,6 @@
         <div class="buttons">
           <button class="btn purpleGradient">Creat Your Certificate</button>
         </div>
-        <!-- <div id="open__items-btn" class="active">
-          <i class="uil uil-bars"></i>
-        </div> -->
         <div id="open__items-btn" class="active">
           <span>|</span>
           <span>|</span>
@@ -94,15 +93,15 @@
     <section class="statistics">
       <div class="container">
         <div class="col">
-          <div class="number">+47</div>
+          <div class="number" data-goal="47">0</div>
           <div class="text">LOREM Ipsum frit Omlet</div>
         </div>
         <div class="col">
-          <div class="number">+1500</div>
+          <div class="number" data-goal="150">0</div>
           <div class="text">LOREM Ipsum frit Omlet</div>
         </div>
         <div class="col">
-          <div class="number">+20</div>
+          <div class="number" data-goal="20">0</div>
           <div class="text">LOREM Ipsum frit Omlet</div>
         </div>
       </div>
@@ -111,7 +110,7 @@
       <div class="container">
         <h2>why You should choose us</h2>
         <div class="cards">
-          <div class="card">
+          <div class="card" data-aos="zoom-in-right" data-aos-duration="1200">
             <img src="assets/cards/openToAll.png" alt="" />
             <div class="title">Open to All:</div>
             <p>
@@ -119,7 +118,7 @@
               in providing
             </p>
           </div>
-          <div class="card">
+          <div class="card" data-aos="zoom-in" data-aos-duration="1200">
             <img src="assets/cards/trustWorthy.png" alt="" />
             <div class="title">TrustWorthy:</div>
             <p>
@@ -127,7 +126,7 @@
               reliability.
             </p>
           </div>
-          <div class="card">
+          <div class="card" data-aos="zoom-in-left" data-aos-duration="1200">
             <img src="assets/cards/realAppreciation.png" alt="" />
             <div class="title">real appreciation:</div>
             <p>
@@ -140,32 +139,49 @@
     </section>
     <section id="howWorks" class="howWorks">
       <div class="container">
-        <h2 class="h2title">
-          How it works?
-          <!-- <img src="./assets/svgIcons/howItWorks.svg" alt="" /> -->
-        </h2>
+        <h2 class="h2title">How it works?</h2>
         <p class="ptitle">
           Follow this simple steps to obtain your certificate :
         </p>
         <div class="steps">
-          <div class="step">
+          <div
+            class="step"
+            data-aos="fade-left"
+            data-aos-duration="800"
+            data-aos-delay=""
+          >
             <span>1</span>
             <h3>apply</h3>
             <p>fill out the form with your details and skills</p>
           </div>
-          <div class="step">
+          <div
+            class="step"
+            data-aos="fade-left"
+            data-aos-duration="800"
+            data-aos-delay="200"
+          >
             <span>2</span>
             <h3>submit</h3>
             <p>
               provide your cv to help us better understand your qualifications .
             </p>
           </div>
-          <div class="step">
+          <div
+            class="step"
+            data-aos="fade-left"
+            data-aos-duration="800"
+            data-aos-delay="400"
+          >
             <span>3</span>
             <h3>review</h3>
             <p>our team will asess your application and skills.</p>
           </div>
-          <div class="step">
+          <div
+            class="step"
+            data-aos="fade-left"
+            data-aos-duration="800"
+            data-aos-delay="600"
+          >
             <span>4</span>
             <h3>receive</h3>
             <p>if approved, you will recieve your certificate via email.</p>
@@ -182,7 +198,7 @@
         </h2>
         <p class="ptitle">have questions ?we’re here to help</p>
       </div>
-      <div class="content">
+      <div class="content" data-aos="slide-up" data-aos-duration="1200">
         <div class="container">
           <div class="hunk">
             <div class="title">
@@ -279,92 +295,6 @@
         </div>
       </div>
     </section>
-    <!-- <section class="certificate">
-      <div class="container">
-        <h2 class="h2title">create your certificate</h2>
-        <p class="ptitle">
-          Ready to showcase your skills and unlock new opportunities? Fill out
-          the form below to start your certificate journey.
-        </p>
-        <form action="">
-          <h3>personal inforamtion</h3>
-          <label for="name">full name</label>
-          <input type="text" name="name" id="name" placeholder="Mohamed" />
-          <label for="">place of birth</label>
-          <input type="text" name="name" id="name" placeholder="djelfa" />
-          <label for="">date of birth</label>
-          <input type="date" name="name" id="name" placeholder="name" />
-
-          <h3>contact inforamiton</h3>
-          <label for="">email</label>
-          <input
-            type="email"
-            name="name"
-            id="name"
-            placeholder="chaibon@gmail.com"
-          />
-          <label for="">phone number</label>
-          <input type="number" name="name" id="name" placeholder="023423424" />
-          <h3>certificate information</h3>
-          <label for="">skill name</label>
-          <input type="text" name="name" id="name" placeholder="Design" />
-          <label for="">upload cv</label>
-          <div class="drop-section">
-            <div class="col">
-              <div class="cloud-icon">
-                <img src="./assets/upload_1-512-1744225666.png" alt="" />
-              </div>
-              <span class="hideInMobile">drag&drop or </span>
-              <span class="file-selector"> choose file </span>
-              <span class="hideInMobile"> to upload</span>
-              <input
-                type="file"
-                class="file-selector-input"
-                multiple
-                required
-              />
-            </div>
-            <div class="col">
-              <div class="drop-here">Drop Here</div>
-            </div>
-          </div>
-
-          <div class="list-section">
-            <div class="list-title">Uploaded Files</div>
-            <div class="list"></div>
-          </div>
-          <input
-            type="submit"
-            class="submit btn purpleGradient"
-            value="place request"
-          />
-        </form>
-      </div>
-    </section> -->
-    <!-- <footer id="contact">
-      <div class="container">
-        <div class="up">
-          <div class="accounts">
-            <a href=""><img src="assets/facebook.png" alt="" /></a>
-            <a href=""><img src="assets/telegram.png" alt="" /></a>
-          </div>
-          <div class="logo">
-            <a class="logo" href="./index.html"
-              ><img src="assets/logo.png" alt=""
-            /></a>
-          </div>
-          <a class="contactUs" href="">Contact Us</a>
-        </div>
-        <div class="down">
-          <p>Copyright &copy; 2023 igccenter.</p>
-          <div class="links">
-            <a href="">TERMS & conditions</a>
-            <a href="">privacy policy </a>
-            <a href="">FAQ</a>
-          </div>
-        </div>
-      </div>
-    </footer> -->
     <footer>
       <div class="container">
         <div class="up">
@@ -425,7 +355,15 @@
         </div>
       </div>
     </footer>
+    <script src="js/statisticsAnimation.js"></script>
     <script src="js/faq.js"></script>
     <script src="js/main.js"></script>
+    <!-- for some animation -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        once: true,
+      });
+    </script>
   </body>
 </html>

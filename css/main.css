@@ -123,12 +123,19 @@ input {
   cursor: pointer;
   transition: var(--transition);
 }
-.LearnMore img {
+.LearnMore i{
   position: absolute;
-  width: 1rem;
-  top: 50%;
-  right: 2em;
-  transform: translateY(-60%);
+  width: 2rem;
+  font-size: 1.5rem;
+  top: 0.75rem;
+  right: 1rem;
+  transform: rotate(45deg);
+  display: grid;
+  place-items: center;
+}
+.LearnMore:hover{
+  background-color: var(--color-blue);
+  color: var(--color-white);
 }
 
 .bigTitle h1 {
@@ -190,7 +197,6 @@ header .container {
   align-items: center;
   gap: 28px;
   width: fit-content;
-  /* transform: translateX(-50%); */
 }
 #nav__items li a {
   transition: var(--transition);
@@ -198,13 +204,18 @@ header .container {
   position: relative;
   display: flex;
   flex-direction: row;
-  gap: 1rem;
+  gap: 1.5rem;
 }
-#nav__items li a img {
+#nav__items li a i{
+  color: var(--color-black);
   width: 20px;
+  display: grid;
+  place-items: center;
+  font-size: 1.5rem;
+  transition: var(--transition);
 }
 
-#nav__items li a:after {
+/* #nav__items li a:after {
   content: "";
   width: 0%;
   height: 3px;
@@ -213,14 +224,17 @@ header .container {
   position: absolute;
   background-color: var(--color-blue);
   transition: var(--transition);
-}
+} */
 
 #nav__items li:hover a {
   color: var(--color-blue);
 }
-#nav__items li:hover a:after {
-  width: calc(100% - 36px);
+#nav__items li:hover a i {
+  color: var(--color-blue);
 }
+/* #nav__items li:hover a:after {
+  width: calc(100% - 36px);
+} */
 
 header .container .buttons .btn {
   text-transform: capitalize;
@@ -254,7 +268,7 @@ header .container .buttons .sign-in:hover {
 .landingPage .container {
   display: grid;
   grid-template-columns: 28.375rem 36.615rem;
-  grid-template-rows: 19.25rem 5.25rem 7rem 3.25rem 20rem;
+  grid-template-rows: 17.25rem 4.25rem 7rem 3.25rem 20rem;
   column-gap: 5rem;
   justify-content: center;
   align-items: center;
@@ -264,6 +278,7 @@ header .container .buttons .sign-in:hover {
   font-size: 3rem;
   font-weight: 700;
   color: var(--color-blue);
+  margin-top: 2rem;
   padding-bottom: 1.5rem;
   text-transform: uppercase;
   position: relative;
@@ -271,9 +286,9 @@ header .container .buttons .sign-in:hover {
 }
 .landingPage h1 img {
   position: absolute;
-  width: 7rem;
-  top: -4rem;
-  right: -3rem;
+  width: 4rem;
+  top: -2rem;
+  right: -1.5rem;
 }
 .landingPage h1 span {
   color: var(--color-purple);

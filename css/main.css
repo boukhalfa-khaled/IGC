@@ -14,8 +14,8 @@
 
   --transition: all 300ms ease;
 
-  --container-width-lg: 74%;
-  --container-width-md: 88%;
+  --container-width-lg: 96%;
+  --container-width-md: 90%;
 
   --btn-raduis: 8px;
   --form-raduis: 12px 12px 0 0;
@@ -1032,8 +1032,8 @@ footer .down .icons a {
 @media screen and (max-width: 600px) {
   /* start general */
   .container {
-    width: 100%;
-    padding: 1rem;
+    width: 94%;
+    /* padding: 1rem; */
   }
   /* end general */
   /* start components */

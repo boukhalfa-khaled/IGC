@@ -123,7 +123,7 @@ input {
   cursor: pointer;
   transition: var(--transition);
 }
-.LearnMore i{
+.LearnMore i {
   position: absolute;
   width: 2rem;
   font-size: 1.5rem;
@@ -133,7 +133,7 @@ input {
   display: grid;
   place-items: center;
 }
-.LearnMore:hover{
+.LearnMore:hover {
   background-color: var(--color-blue);
   color: var(--color-white);
 }
@@ -163,6 +163,9 @@ input {
   color: var(--color-gray);
   margin: 0 auto 4rem auto;
   line-height: 22.23px;
+}
+span.colorBlue {
+  color: var(--color-blue);
 }
 
 /* ====================================================== */
@@ -206,7 +209,7 @@ header .container {
   flex-direction: row;
   gap: 1.5rem;
 }
-#nav__items li a i{
+#nav__items li a i {
   color: var(--color-black);
   width: 20px;
   display: grid;
@@ -440,6 +443,7 @@ header .container .buttons .sign-in:hover {
   justify-content: center;
   margin-top: 5rem;
 }
+
 .whyUs .card {
   background-color: var(--color-white);
   border-radius: var(--btn-raduis);
@@ -452,9 +456,9 @@ header .container .buttons .sign-in:hover {
   box-shadow: 0px 1px 3px 0px #0000001a, 0px 5px 5px 0px #00000017,
     0px 11px 7px 0px #0000000d, 0px 20px 8px 0px #00000003,
     0px 32px 9px 0px #00000000;
-  transition-property: all !important; 
+  transition-property: all !important;
 }
-.whyUs .card:hover { 
+.whyUs .card:hover {
   transform: scale(110%) translateY(-1rem) !important;
   box-shadow: 0px 10px 9px 0px #00000072;
 }
@@ -816,11 +820,75 @@ footer .down .icons a {
  *
  */
 /* ====================================================== */
-/*                                                      */
+/*                 start terms and condition                                                */
 /* ====================================================== */
+.terms .bigTitle {
+  margin-top: 5rem;
+  margin-bottom: 6.25rem;
+  padding: 3.75rem 0;
+  background-color: var(--color-blue);
+}
+.terms .bigTitle .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.terms .content .container {
+  display: flex;
+  gap: 3%;
+}
+.terms nav {
+  width: 40%;
+}
+.terms nav ul {
+  display: flex;
+  flex-direction: column;
+  gap: 54px;
+}
+.terms nav a {
+  font-size: 1.5rem;
+  transition: var(--transition);
+  text-transform: capitalize;
+}
+.terms nav a:hover {
+  color: var(--color-blue);
+  font-weight: bold;
+}
+.terms .info {
+  width: 57%;
+  /* height: 5000px; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 4rem;
+}
+.terms .info .hunk {
+  display: flex;
+  flex-direction: column;
+}
+.terms .info .hunk h2 {
+  color: var(--color-blue);
+  font-size: 2.5rem;
+  font-weight: 700;
+  letter-spacing: 0.05rem;
+  text-transform: capitalize;
+  margin-bottom: 2.75rem;
+}
+.terms .info .hunk p {
+  color: var(--color-black);
+  font-size: 1.125rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 2.5rem;
+  letter-spacing: 0.0675rem;
+}
 
+.terms .info .hunk p + p {
+  margin-top: 1rem;
+}
 /* ====================================================== */
-/*                                                        */
+/*                  End terms and condition                                                       */
 /* ====================================================== */
 /* 
  *
@@ -1033,6 +1101,14 @@ footer .down .icons a {
     right: -2rem;
   }
   /* =========  End FAQ ==========*/
+  /* =========  Start Terms==========*/
+  .terms nav {
+    display: none;
+  }
+  .terms .info {
+    width: 100%;
+  }
+  /* =========  End Terms==========*/
 }
 /* 
 =

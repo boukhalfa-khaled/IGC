@@ -46,18 +46,33 @@
             <a href="./aboutUs.html"><i class="fa-solid fa-users"></i>About</a>
           </li>
           <li>
-            <a href="#certifcate"
-              ><i class="fa-solid fa-file-lines"></i>certificate</a
-            >
-          </li>
-          <li>
             <a href="#contact"
               ><i class="fa-solid fa-phone-volume"></i> Contact</a
             >
           </li>
+          <li id="certificateLink">
+            <!-- <a href="" > -->
+            <div>
+              certificate
+              <i class="fa-solid fa-caret-down"></i>
+            </div>
+            <!-- </a> -->
+            <ul class="l2list">
+              <li><a href="">AFILIATION</a></li>
+              <li><a href="">COMPETENSE</a></li>
+              <li><a href="">TRAINING</a></li>
+            </ul>
+          </li>
         </ul>
         <div class="buttons">
-          <button class="btn purpleGradient">Creat Your Certificate</button>
+          <button id="createCertificate" class="btn purpleGradient">
+            Creat Your Certificate <i class="fa-solid fa-angle-down"></i>
+          </button>
+          <ul id="certificateList" class="certificateList">
+            <li><a href="">afiliation</a></li>
+            <li><a href="">competense</a></li>
+            <li><a href="">training</a></li>
+          </ul>
         </div>
         <div id="open__items-btn" class="active">
           <span>|</span>
@@ -75,12 +90,12 @@
           unlock new opportunities with our certificate , show off your skill
           and expertise to the world.
         </p>
-        <a class="LearnMore" href="./form.html">
+        <a class="LearnMore" href="./aboutUs.html">
           Learn More <i class="fa-solid fa-arrow-up"></i>
         </a>
-        <button class="btn purpleGradient">
+        <!-- <button class="btn purpleGradient">
           <a href="form.html">create your certificate</a>
-        </button>
+        </button> -->
         <div class="landingPage__images">
           <img src="./assets/1.svg" data-number="1" />
           <img src="./assets/2.svg" data-number="2" />
@@ -291,6 +306,9 @@
               values of equity and transparency.
             </p>
           </div>
+          <a class="LearnMore toTerms" href="./FAQ.html"
+            >Explore More<i class="fa-solid fa-arrow-up"></i
+          ></a>
         </div>
       </div>
     </section>
@@ -328,7 +346,7 @@
             <div class="title">support</div>
             <ul>
               <a href="">Email</a>
-              <a href="">FAQ</a>
+              <a href="FAQ.html">FAQ</a>
               <a href="">+44000000</a>
             </ul>
           </div>
@@ -336,9 +354,9 @@
           <div class="company">
             <div class="title">company</div>
             <ul>
-              <a href="">about us</a>
-              <a href="">terms & conditions</a>
-              <a href="">privacy policy</a>
+              <a href="./aboutUs.html">about us</a>
+              <a href="./terms.html">terms & conditions</a>
+              <a href="./policy.html">privacy policy</a>
             </ul>
           </div>
         </div>

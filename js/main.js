@@ -7,6 +7,12 @@ document.onclick = function (e) {
     openItemsBtn.classList.remove("active");
     navItems.classList.remove("active");
   }
+  if (
+    e.target.id !== "certificateList" &&
+    e.target.id !== "createCertificate"
+  ) {
+    certificateList.classList.remove("active");
+  }
 };
 
 openItemsBtn.onclick = function () {
@@ -25,3 +31,11 @@ function updateDataNumber() {
 }
 
 setInterval(updateDataNumber, 5000);
+
+const createCertificate = document.querySelector("#createCertificate");
+const certificateList = document.querySelector(".certificateList");
+createCertificate.onclick = function () {
+  certificateList.classList.toggle("active");
+  console.log(createCertificate);
+  console.log(certificateList);
+};

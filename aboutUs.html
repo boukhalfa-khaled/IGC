@@ -27,41 +27,49 @@
         /></a>
         <ul id="nav__items" class="nav__items">
           <button class="close__items-btn showInMoblie">
-            <i class="uil uil-times"></i>
+            <i class="fa-solid fa-x"></i>
           </button>
           <a class="logo showInMoblie" href="./index.html"
             ><img src="./assets/logo.png" alt=""
           /></a>
           <li>
-            <a href="./index.html"
-              ><img src="assets/navIcons/home.svg" alt="" />Home</a
+            <a href="./index.html">
+              <i class="fa-solid fa-house"></i>
+              Home</a
             >
           </li>
           <li>
-            <a href="./aboutUs.html"
-              ><img src="assets/navIcons/about.svg" alt="" />About</a
-            >
-          </li>
-          <li>
-            <a href="#certifcate"
-              ><img
-                src="assets/navIcons/certificate.svg"
-                alt=""
-              />certificate</a
-            >
+            <a href="./aboutUs.html"><i class="fa-solid fa-users"></i>About</a>
           </li>
           <li>
             <a href="#contact"
-              ><img src="assets/navIcons/contact.svg" alt="" />Contact</a
+              ><i class="fa-solid fa-phone-volume"></i> Contact</a
             >
+          </li>
+          <li id="certificateLink">
+            <!-- <a href="" > -->
+            <div>
+              certificate
+              <i class="fa-solid fa-caret-down"></i>
+            </div>
+            <!-- </a> -->
+            <ul class="l2list">
+              <li><a href="">AFILIATION</a></li>
+              <li><a href="">COMPETENSE</a></li>
+              <li><a href="">TRAINING</a></li>
+            </ul>
           </li>
         </ul>
         <div class="buttons">
-          <button class="btn purpleGradient">Creat Your Certificate</button>
+          <button id="createCertificate" class="btn purpleGradient">
+            Creat Your Certificate <i class="fa-solid fa-angle-down"></i>
+          </button>
+          <ul id="certificateList" class="certificateList">
+            <li><a href="">afiliation</a></li>
+            <li><a href="">competense</a></li>
+            <li><a href="">training</a></li>
+          </ul>
         </div>
-        <!-- <div id="open__items-btn" class="active">
-          <i class="uil uil-bars"></i>
-        </div> -->
         <div id="open__items-btn" class="active">
           <span>|</span>
           <span>|</span>
@@ -218,7 +226,7 @@
             <div class="title">support</div>
             <ul>
               <a href="">Email</a>
-              <a href="">FAQ</a>
+              <a href="FAQ.html">FAQ</a>
               <a href="">+44000000</a>
             </ul>
           </div>
@@ -226,9 +234,9 @@
           <div class="company">
             <div class="title">company</div>
             <ul>
-              <a href="">about us</a>
-              <a href="">terms & conditions</a>
-              <a href="">privacy policy</a>
+              <a href="./aboutUs.html">about us</a>
+              <a href="./terms.html">terms & conditions</a>
+              <a href="./policy.html">privacy policy</a>
             </ul>
           </div>
         </div>

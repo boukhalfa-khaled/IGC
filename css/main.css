@@ -101,13 +101,20 @@ input {
   border: none;
   background-color: var(--color-purple);
   color: var(--color-white);
-  /* padding: 1em 3em; */
   text-transform: capitalize;
-  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.25),
-    -1px 5px 5px 0px rgba(0, 0, 0, 0.21), -2px 11px 7px 0px rgba(0, 0, 0, 0.13),
-    -3px 19px 8px 0px rgba(0, 0, 0, 0.04), -5px 30px 8px 0px rgba(0, 0, 0, 0);
   height: 3.25rem;
   width: 15rem;
+  position: relative;
+  padding-right: 3rem;
+  padding-left: 1rem;
+}
+.purpleGradient i {
+  font-size: 2rem;
+  position: absolute;
+  right: 1.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
 }
 .LearnMore {
   border: 1px solid var(--color-blue);
@@ -167,7 +174,6 @@ input {
 span.colorBlue {
   color: var(--color-blue);
 }
-
 /* ====================================================== */
 /*                    End Components                      */
 /* ====================================================== */
@@ -201,43 +207,34 @@ header .container {
   gap: 28px;
   width: fit-content;
 }
-#nav__items li a {
+#nav__items > li > a {
   transition: var(--transition);
   color: var(--color-gray);
   position: relative;
   display: flex;
   flex-direction: row;
-  gap: 1.5rem;
+  /* gap: 1.5rem; */
 }
-#nav__items li a i {
+#nav__items > li > a i {
   color: var(--color-black);
   width: 20px;
   display: grid;
   place-items: center;
   font-size: 1.5rem;
   transition: var(--transition);
+  margin-right: 1.5rem;
 }
-
-/* #nav__items li a:after {
-  content: "";
-  width: 0%;
-  height: 3px;
-  left: 36px;
-  bottom: -5px;
-  position: absolute;
-  background-color: var(--color-blue);
-  transition: var(--transition);
+/* #nav__items li a i.fa-caret-down {
+  font-size: 1rem;
+  margin-left: 0.5rem;
 } */
 
-#nav__items li:hover a {
+#nav__items > li:hover > a {
   color: var(--color-blue);
 }
-#nav__items li:hover a i {
+#nav__items > li:hover > a i {
   color: var(--color-blue);
 }
-/* #nav__items li:hover a:after {
-  width: calc(100% - 36px);
-} */
 
 header .container .buttons .btn {
   text-transform: capitalize;
@@ -250,7 +247,59 @@ header .container .buttons .sign-in:hover {
 #open__items-btn {
   display: none;
 }
+#certificateLink {
+  display: none;
+}
 
+header .buttons {
+  position: relative;
+  z-index: 1000;
+}
+.certificateList {
+  position: absolute;
+  background: var(--color-white);
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 100%;
+  top: 150%;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 400ms ease;
+}
+.certificateList.active {
+  max-height: 227px;
+}
+
+.certificateList li {
+  text-transform: uppercase;
+  padding-left: 3rem;
+  position: relative;
+  height: 37px;
+  line-height: 37px;
+  transition: var(--transition);
+  cursor: pointer;
+}
+.certificateList li:hover {
+  background-color: var(--color-purple);
+}
+.certificateList li:hover a {
+  color: var(--color-white);
+}
+.certificateList li::before {
+  content: "";
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: var(--color-purple);
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 1rem;
+}
+.certificateList li:hover::before {
+  background-color: var(--color-white);
+}
 /* ====================================================== */
 /*                    End  header                         */
 /* ====================================================== */
@@ -766,6 +815,7 @@ footer .down .icons a {
   display: flex;
   flex-direction: column;
   gap: 2.5rem;
+  box-shadow: 0px 4px 12px 0 rgba(0, 0, 0, 0.3);
 }
 .faq .content .hunk {
   max-width: 600px;
@@ -882,10 +932,22 @@ footer .down .icons a {
   font-weight: 400;
   line-height: 2.5rem;
   letter-spacing: 0.0675rem;
+  padding-left: 2rem;
+  background-color: green;
 }
 
 .terms .info .hunk p + p {
   margin-top: 1rem;
+}
+.terms .info .hunk ul li {
+  background-color: red;
+  color: var(--color-black);
+  font-size: 1.125rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 2.5rem;
+  letter-spacing: 0.0675rem;
+  padding-left: 2rem;
 }
 /* ====================================================== */
 /*                  End terms and condition                                                       */
@@ -966,11 +1028,14 @@ footer .down .icons a {
     transition: var(--transition);
   }
 
-  #nav__items li a {
+  #nav__items > li > a {
     color: var(--color-black);
     font-weight: 600;
     font-size: 1.25rem;
     text-transform: uppercase;
+  }
+  #nav__items > li > a i {
+    display: none;
   }
 
   .close__items-btn {
@@ -997,6 +1062,48 @@ footer .down .icons a {
 
   #nav__items.active {
     right: 0;
+  }
+  #certificateLink {
+    display: block;
+  }
+  #certificateLink div {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    color: var(--color-black);
+    font-weight: 600;
+    font-size: 1.25rem;
+    text-transform: uppercase;
+    pointer-events: none;
+  }
+  #certificateLink div i {
+    color: var(--color-black);
+    width: 20px;
+    display: grid;
+    place-items: center;
+    font-size: 1.5rem;
+    transition: var(--transition);
+    /* margin-right: 1.5rem; */
+    pointer-events: none;
+    font-size: 1rem;
+    margin-left: 0.5rem;
+  }
+  .l2list {
+    margin-top: 1.5rem;
+    background-color: var(--color-background);
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-inline: auto;
+  }
+
+  .l2list li a {
+    text-transform: uppercase;
+    transition: var(--transition);
+  }
+  .l2list li:hover a {
+    color: var(--color-blue);
   }
   /* =========  End  Header ========== */
 
@@ -1057,11 +1164,11 @@ footer .down .icons a {
     width: 100%;
   }
   .landingPage .LearnMore {
-    display: none;
+    /* display: none; */
   }
 
   .landingPage button.btn {
-    display: block;
+    /* display: block; */
   }
   /* =========  End  LandingPage ========== */
   /* =========  Start  Statistics ========== */
@@ -1139,6 +1246,7 @@ footer .down .icons a {
   .bigTitle h1 img {
     width: 3rem;
     left: -3rem;
+    display: none;
   }
   .hideInMobile {
     display: none;
